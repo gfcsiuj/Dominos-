@@ -3,9 +3,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 
-// Fix for ESM bundles that look for React globally to avoid multiple instance issues
-(window as any).React = React;
-
 const rootElement = document.getElementById('root');
 if (!rootElement) {
   throw new Error("Could not find root element to mount to");
