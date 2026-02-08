@@ -1,10 +1,5 @@
 
-export enum AppState {
-  WELCOME = 'WELCOME',
-  SETUP = 'SETUP',
-  GAME = 'GAME',
-  WINNER = 'WINNER'
-}
+export type AppState = 'WELCOME' | 'SETUP' | 'GAME' | 'WINNER';
 
 export type Team = {
   name: string;
@@ -15,5 +10,5 @@ export type Team = {
 export type GameSettings = {
   team1Name: string;
   team2Name: string;
-  limit: 51 | 101 | 151;
+  limit: number;
 };
