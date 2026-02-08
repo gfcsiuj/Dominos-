@@ -33,18 +33,19 @@
             background: rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        /* Fluid Typography */
-        .fluid-score { font-size: clamp(5rem, 25vw, 12rem); }
-        .fluid-bg-text { font-size: clamp(4rem, 18vw, 10rem); }
+        /* نصوص متجاوبة ذكية */
+        .fluid-score { font-size: clamp(5rem, 28vw, 14rem); }
+        .fluid-bg-text { font-size: clamp(4rem, 20vw, 12rem); }
+        .fluid-btn-text { font-size: clamp(1.2rem, 5vw, 2rem); }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "framer-motion": "https://esm.sh/framer-motion@^12.33.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@19.0.0/",
+    "react/": "https://esm.sh/react@19.0.0/",
+    "react": "https://esm.sh/react@19.0.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.17",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0",
     "canvas-confetti": "https://esm.sh/canvas-confetti@1.9.3"
   }
 }
@@ -52,6 +53,8 @@
 </head>
 <body class="transition-colors duration-300">
     <div id="root"></div>
+    <!-- الربط البرمجي الأساسي - هذا يحل مشكلة الشاشة السوداء -->
+    <script type="module" src="index.tsx"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

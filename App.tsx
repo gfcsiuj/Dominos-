@@ -91,7 +91,6 @@ const App: React.FC = () => {
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-white dark:bg-slate-950 text-slate-900 dark:text-white select-none transition-colors duration-500 flex flex-col">
-      
       <AnimatePresence>
         {toast && (
           <MotionDiv
@@ -114,7 +113,6 @@ const App: React.FC = () => {
             key="welcome"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
             className="h-full flex flex-col items-center justify-center p-10 text-center"
           >
             <MotionDiv 
@@ -142,7 +140,6 @@ const App: React.FC = () => {
             key="setup"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
             className="h-full flex flex-col bg-slate-50 dark:bg-slate-900 p-8 pt-16 overflow-y-auto"
           >
             <h2 className="text-4xl font-black mb-10 text-right">الإعدادات</h2>
